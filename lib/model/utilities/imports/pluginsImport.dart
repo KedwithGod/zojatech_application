@@ -22,4 +22,6 @@ export 'package:url_launcher/url_launcher.dart';
 export 'package:visibility_detector/visibility_detector.dart';
 export 'package:intl/intl.dart' hide TextDirection;
 export 'package:mockito/mockito.dart';
+export 'package:sqflite/sqflite.dart' hide Transaction;
+export 'package:sqflite_common_ffi/sqflite_ffi.dart' hide Transaction;
 

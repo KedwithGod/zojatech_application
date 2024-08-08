@@ -1,7 +1,5 @@
 // to let the notification now what page to go back to
 
-import '../imports/general_import.dart';
-
 String? notificationBackBucket;
 String? resetPasswordEmailBucket;
 String? initialRouteBucket;

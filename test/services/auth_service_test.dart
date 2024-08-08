@@ -14,7 +14,6 @@ void main() {
     // Arrange
     String email = 'test@example.com';
     String password = 'password';
-    User mockUser = await authService.login(email, password);
 
     // Act
     User user = await authService.login(email, password);
@@ -38,7 +37,7 @@ void main() {
     String name = 'New User';
     String email = 'newuser@example.com';
     String password = 'newpassword';
-    User registeredUser = await authService.register(name, email, password);
+  
 
     // Act
     User user = await authService.register(name, email, password);

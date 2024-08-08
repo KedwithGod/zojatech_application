@@ -59,6 +59,7 @@ dependencies:
   another_flushbar: ^1.12.30
   package_info_plus: ^3.1.2
   flutter_swipe_detector: ^2.0.0
+  sqflite_common_ffi:
 
 flutter_native_splash:
   color: "#4C0084"
