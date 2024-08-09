@@ -1,1 +1,20 @@
-1. Task 2 is done directly inside the lib folder of the flutter project
+1. SRP Implementation:
+Model Classes: The lib/model/models folder contains model classes for User and Products.
+Interface Classes: Interface classes for ProductService, AuthService, and UserService are created in the lib folder, providing abstraction and enhancing testability.
+Service Implementation: The ProductService and AuthService classes implement their respective interfaces and are located in lib/model/services.
+Testing: Tests for these services are already written. You can find them at:
+test/services/auth_service_test.dart for AuthService.
+test/services/product_service_test.dart for ProductService.
+2. DRY Implementation:
+Import Management: A new lib/model/import folder is created to centralize all necessary imports, ensuring each file in the application has a maximum of two imports: general_import.dart and any other specific imports like flutter_test. This reduces repetition of import statements across the codebase.
+General Service Class: A general service class is implemented to handle common HTTP requests (POST, GET, UPDATE, DELETE, PUT). This prevents the need to redefine HTTP implementation when making API calls in different services.
+Constants Management: The lib/utilities/constants folder is created to store all strings, enums, and URLs used across the application, avoiding repetition.
+Reusable Functions: A lib/utilities/functions folder is created to house reusable functions like validateEmail, validatePassword, copyToClipboard, and localStorage.
+3. Service-Oriented Development:
+UserService: Located in lib/model/services/user.dart, the UserService class is designed to use AuthService for authenticating users and managing user sessions.
+ProductService: The ProductService class, found in lib/model/services/product.dart, interacts with an API to fetch product listings and details, implementing the IProductService interface.
+TransactionService: The TransactionService class is designed in lib/model/services/transaction.dart. It interacts with an API to fetch transaction lists based on the logged-in user, transaction details, disputes, and handles transaction posts, implementing the ITransactionService interface.
+Mock Tests: Each service has a corresponding mock test class located in lib/model/services/mock, with the actual tests found in test/services.
+Running Tests: To run all the tests, use the following command in the terminal:
+flutter test test/services
+

@@ -1,0 +1,9 @@
+
+Data Storage:
+
+a. SQLite Implementation:
+Database Setup: The SQLite database setup has been fully implemented, including creating the database, defining the tables, and instantiating the service class. The implementation can be found in lib/model/services/sqflite/db_service.dart.
+
+Transaction Service: An interface ITransactionDatabase has been created for the transaction service. The TransactionDatabase service class implements this interface to handle saving and retrieving transactions from the SQLite database.
+
+Testing: A comprehensive test for the SQLite transaction service implementation has been created. The test can be found in test/services/sqflite_transaction_test.dart.

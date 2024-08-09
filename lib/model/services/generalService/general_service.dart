@@ -6,7 +6,7 @@ class NetworkService {
   final Map<String, String>? headers;
 
   NetworkService({this.headers});
-
+  // get request
   Future<GeneralResponse<T>> getRequest<T>(
       String endpoint, T Function(dynamic) create) async {
     try {
@@ -22,6 +22,7 @@ class NetworkService {
     }
   }
 
+ // 
   Future<GeneralResponse<T>> postRequest<T>(String endpoint,
       Map<String, dynamic> body, T Function(dynamic) create) async {
     try {

@@ -1,4 +1,5 @@
-1. For the SRP (Single Responsibility Principle), i seperated the code into different piece, the model for handind data model, 
-The viewmodel for getting data from teh service and passing it to the model, and the view only handles rendering the user interface
-2. For DRY (Don't RepeatYourself), i create a generalTextDisplay widget to handle displaying text and to prevent repetition of the widget allover the view, this will ensure, if 
-for example a the application font is changes, since all the text is handled by one widget, it can be changed for the generalTextDisplay widget and it will be effected across the whole application
+1. For the SRP (Single Responsibility Principle), I seperated the codes into three different parts as below
+i. The model: for handling data model,
+ii. The view-model: for getting data from the service and passing it to the view,
+iii. The view: it only handles rendering the user interface.
+2. For DRY (Don't Repeat Yourself)--> I created a generalTextDisplay widget to handle displaying text and to prevent repetition of the widget all over the view, if for example, the application font is changed, since all the text is handled by one widget, it can be adjusted easily from the generalTextDisplay widget and it will be effected across the whole application.

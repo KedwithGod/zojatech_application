@@ -14,7 +14,6 @@ class DatabaseHelper {
   }
 
   Future<Database> _initDatabase() async {
-    print('i was called');
     final dbPath = join(await getDatabasesPath(), 'transactions.db');
     return await openDatabase(
       dbPath,

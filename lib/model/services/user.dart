@@ -3,7 +3,6 @@ import '../utilities/imports/general_import.dart';
 class UserService {
   User? _currentUser;
 
-
   // Getter to access the current user
   User? get currentUser => _currentUser;
 
@@ -17,6 +16,8 @@ class UserService {
     try {
       _currentUser = await authService.login(email, password);
       // Optionally, save user data to local storage or secure storage
+      LocalStorage.setString(
+          userDetailsKey, jsonEncode(_currentUser!.toJson()));
     } catch (e) {
       rethrow;
     }
@@ -28,6 +29,7 @@ class UserService {
       await authService.logout();
       _currentUser = null;
       // Optionally, clear user data from local storage or secure storage
+      LocalStorage.clear();
     } catch (e) {
       rethrow;
     }

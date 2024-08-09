@@ -3,14 +3,19 @@
 
 import '../imports/general_import.dart';
 
-// instantiate classes
 
 // constant strings
 const String tokenKey = 'token';
 const String imageKey = 'image';
+const String userDetailsKey = 'userDetails';
 const String securityQuestionSet = 'securityQuestion';
 const String offlineModeKey = 'offlineMode';
 const String publicUser = 'Public user';
+
+
+
+
+
 
 // class initialization
 DeviceInfoPlugin deviceInfo = DeviceInfoPlugin();
@@ -18,6 +23,11 @@ AuthService authService = AuthService();
 DatabaseHelper databaseHelper = DatabaseHelper();
 // for handling api_call
 final networkService = NetworkService();
+
+
+
+
+
 
 // error string
 const String networkError =
@@ -41,25 +51,3 @@ const String invalidPassword =
 const String invalidEmail = ' Please enter a valid email address.';
 const String isEmptyString = " must be filled";
 const String serviceUnavailableError = "Service provider not available";
-
-// string for RTS
-// savedCard status
-const String savedStatus = "Saved";
-//
-const String success = 'success';
-const String failed = 'failed';
-const String cardCharge = '5000';
-
-// primary swatch color map
-final Map<int, Color> primarySwatchColor = {
-  50: green.withOpacity(0.1),
-  100: green.withOpacity(0.2),
-  200: green.withOpacity(0.3),
-  300: green.withOpacity(0.4),
-  400: green.withOpacity(0.5),
-  500: green.withOpacity(0.6),
-  600: green.withOpacity(0.7),
-  700: green.withOpacity(0.8),
-  800: green.withOpacity(0.9),
-  900: green.withOpacity(1.0),
-};
